@@ -19,7 +19,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shuffle_button_label"
+        android:text="shuffle"
         android:id="@+id/shuffle_button"
         android:onClick="shuffleImage"
         android:layout_alignTop="@+id/photo_button"

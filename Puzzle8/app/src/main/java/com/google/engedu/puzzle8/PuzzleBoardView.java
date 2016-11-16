@@ -35,6 +35,9 @@ public class PuzzleBoardView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        if(puzzleBoard == null){
+            Toast toast = Toast.makeText(activity, "Please Take a PIC first", Toast.LENGTH_LONG);
+        }
         if (puzzleBoard != null) {
             if (animation != null && animation.size() > 0) {
                 puzzleBoard = animation.remove(0);
@@ -47,7 +50,7 @@ public class PuzzleBoardView extends View {
                 } else {
                     this.postInvalidateDelayed(500);
                 }
-            } else {
+            }else {
                 puzzleBoard.draw(canvas);
             }
         }
